@@ -42,6 +42,10 @@ startBtn.addEventListener("click", function () {
 });
 
 // STEP 4: Clicking on an answer will display "Correct!" or "Wrong." in our feedback element
+// Add an on click event to the buttons you create
+// a method that will check the text/value  of the button and see if it equals the correct answer
+
+
 // then bring us to the next question
 // choiceBtns.addEventListener("click", event => {
 //   if text.value === "correct")
