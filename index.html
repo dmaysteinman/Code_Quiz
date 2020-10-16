@@ -16,10 +16,23 @@
     <a href="highscores.html"><button>Go to High Scores Page</button></a>
     <!-- Timer -->
     <!-- Start screen / Instructions -->
+    <div id="startscreen" class="show">
+      
+      <p>click button to start game</p>
+      <button id="startBtn">Start game</button>
+      <div id="startClock"></div>
+      
+    </div>
     <!-- Question -->
+    <div>
+      <h2 id="qBox"></h2>
     <!-- Possible answers (choices) -->
+      <div id="choiceBtns"></div>
+    </div>
     <!-- End Screen -->
-    <!-- Feedback "Correct!" or "Wrong." -->
+    <!-- Feedback "Correct!" or "Wrong." Alert box?!? -->
+    <div id="feedback"></div>
+
     <script src="./assets/js/data.js"></script>
     <script src="./assets/js/logic.js"></script>
   </body>
