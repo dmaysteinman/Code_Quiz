@@ -60,7 +60,7 @@ startBtn.addEventListener("click", function () {
 // a method that will check the text/value  of the button and see if it equals the correct answer
 choiceBtns.addEventListener("click", function() {
   console.log("clicked button")
-  if (question() === questions[0].answer)
+  if (question() === question[0].answer)
   feedback.textContent = ("Correct!")
 } else (=>    
   feedback.textContent = ("Wrong!")
