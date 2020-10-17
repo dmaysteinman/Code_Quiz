@@ -16,7 +16,7 @@ const feedback = document.getElementById("feedback");
 function setTimer() {
   const myTimer = setInterval(function() {
     // timer--
-      if (timer === 0) {
+      if (timer <= 0) {
       clearInterval(myTimer);
       feedback.textContent = timer + " seconds left!";
       console.log(timer);
@@ -34,7 +34,7 @@ setTimer();
 
 // STEP 4: Show question and answer button
 
-startBtn.addEventListener("click", function () {
+startBtn.addEventListener("click", function() {
   //hide startscreen (instructions etc)
   // onClick = "this.style.visibility= 'hidden';"
 
@@ -47,10 +47,17 @@ startBtn.addEventListener("click", function () {
     let btn = document.createElement("BUTTON");
     btn.innerHTML = data[0].choices[i];
     choiceBtns.appendChild(btn);
-  }
-
-
+    // btn.onClick ("click", function() {
+    //   if (this.textContent === data[0].answer)
+    //   feedback.value = ("Correct!") 
+    //   else 
+    //   feedback.value = ("Wrong!")
+    // });
+  };
 });
+
+
+
 
 
 
@@ -58,6 +65,8 @@ startBtn.addEventListener("click", function () {
 // Add an on click event to the buttons you create
 // a method that will check the text/value  of the button and see if it equals the correct answer
 choiceBtns.addEventListener("click", function() {
+  console.log(this.textContent);
+  // element.className += 'className';
   if (this.textContent === data[0].answer)
   feedback.value = ("Correct!")
   else
