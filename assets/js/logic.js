@@ -1,33 +1,42 @@
 // STEP 1: Get HTML elements setup so we can manipulate them with JS for our quiz
 let questionNumber = 0;
+let timer = 60;
+let startClock = document.getElementById("#startClock");
 
-console.log(data);
+// console.log(data);
 const startscreen = document.getElementById("startscreen");
 const startBtn = document.getElementById("startBtn");
 const qBox = document.getElementById("qBox");
 const choiceBtns = document.getElementById("choiceBtns");
 const feedback = document.getElementById("feedback");
+// const startClock = document.getElementById("startClock");
+
+
 // STEP 2: Connect multiple .js files to use separate file for data (questions)
+function setTimer() {
+  const myTimer = setInterval(function() {
+    timer--
+      if (timer === 0) {
+      clearInterval(myTimer);
+      startClock.textContent = timer + " seconds left!"
+      console.log(timer);
+      };
+  }, 1000);
+};
+
 
 // STEP 3: Hide instructions when game starts then display a question with possible answers
+startscreen.addEventListener("click", function() {
+  onClick = this.style.visibility='hidden';
+});
+
+
+
+// STEP 4: Show question and answer button
+
 startBtn.addEventListener("click", function () {
   //hide startscreen (instructions etc)
-
-
-  // $("#startClock").click( function(){
-  //   var counter = 5;
-  //   setInterval(function() {
-  //     counter--;
-  //      if (counter >= 0) {
-  //         span = document.getElementById("count");
-  //         span.innerHTML = counter;
-  //      }
-  //      if (counter === 0) {
-  //         alert('sorry, out of time');
-  //         clearInterval(counter);
-  //       }
-  //     }, 1000);
-  // });
+  // onClick = "this.style.visibility= 'hidden';"
 
   //show 1st question
   qBox.textContent = data[0].question;
@@ -39,11 +48,20 @@ startBtn.addEventListener("click", function () {
     btn.innerHTML = data[0].choices[i];
     choiceBtns.appendChild(btn);
   }
+
+  setTimer();
+
 });
+
+
 
 // STEP 4: Clicking on an answer will display "Correct!" or "Wrong." in our feedback element
 // Add an on click event to the buttons you create
 // a method that will check the text/value  of the button and see if it equals the correct answer
+choiceBtns.addEventListener("click", function(){
+  // if ""
+  result.textContent("correct!");
+});
 
 
 // then bring us to the next question
