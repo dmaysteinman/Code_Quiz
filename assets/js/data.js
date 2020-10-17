@@ -13,26 +13,19 @@ var data = [
     choices: ["The body tag", "The head tag", "Both are correct"],
     answer: "Both are correct",
   },
+  // {
+  //   question: "Inside which HTML element do we put the JavaScript?"
+  //   choices: ["js", "javascript", "script", "java"]
+  //   answer: "script",
+  // },
+  // {
+  //   question: "What is the correct way to refererce an external script called flowerpetal.js?"
+  //   choices: ["script src=flowerpetal.js", "script href=flowerpetal.js", "script name=flowerpetal.js]
+  //   answer: "script src=flowerpetal.js",
+  // },
+  // {
+  //   question: "How you do you call a function?"
+  //   choices: ["myFunction()", "function.myfunction()", "on the phone, but it prefers texting", "oFunction myFunction()"]
+  //   answer: "script src=flowerpetal.js",
+  // },
 ];
-
-/*Inside which HTML element do we put the JavaScript?
-  <js>
-  <javascript>
-  <script>
-  <java>
-
-What is the correct way to refererce an external script called "flowerpetal.js"?
-  <script src="flowerpetal.js">
-  <script href="flowerpetal.js">
-  <script name="flowerpetal.js">
-
-How do you create a function in JavaScript?
-  function = myFunction()
-  function.myfunction()
-  function myFunction()
-  oFunction myFunction()
-
-How you do you call a function?
-  oFunction myFunction()
-  myFunction()
-  on the phone, but it prefers texting */

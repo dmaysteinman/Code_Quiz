@@ -1,7 +1,7 @@
 // STEP 1: Get HTML elements setup so we can manipulate them with JS for our quiz
 let questionNumber = 0;
 let timer = 60;
-let startClock = document.getElementById("#startClock");
+let startClock = document.getElementById("startClock");
 
 // console.log(data);
 const startscreen = document.getElementById("startscreen");
@@ -15,10 +15,10 @@ const feedback = document.getElementById("feedback");
 // STEP 2: Connect multiple .js files to use separate file for data (questions)
 function setTimer() {
   const myTimer = setInterval(function() {
-    timer--
+    // timer--
       if (timer === 0) {
       clearInterval(myTimer);
-      startClock.textContent = timer + " seconds left!"
+      feedback.textContent = timer + " seconds left!"
       console.log(timer);
       };
   }, 1000);
@@ -58,10 +58,15 @@ startBtn.addEventListener("click", function () {
 // STEP 4: Clicking on an answer will display "Correct!" or "Wrong." in our feedback element
 // Add an on click event to the buttons you create
 // a method that will check the text/value  of the button and see if it equals the correct answer
-choiceBtns.addEventListener("click", function(){
-  // if ""
-  result.textContent("correct!");
-});
+choiceBtns.addEventListener("click", function() {
+  console.log("clicked button")
+  if (question() === questions[0].answer)
+  feedback.textContent = ("Correct!")
+} else (=>    
+  feedback.textContent = ("Wrong!")
+)};
+
+// })
 
 
 // then bring us to the next question
