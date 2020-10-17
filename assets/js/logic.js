@@ -18,7 +18,7 @@ function setTimer() {
     // timer--
       if (timer === 0) {
       clearInterval(myTimer);
-      feedback.textContent = timer + " seconds left!"
+      feedback.textContent = timer + " seconds left!";
       console.log(timer);
       };
   }, 1000);
@@ -30,7 +30,7 @@ startscreen.addEventListener("click", function() {
   onClick = this.style.visibility='hidden';
 });
 
-
+setTimer();
 
 // STEP 4: Show question and answer button
 
@@ -49,7 +49,6 @@ startBtn.addEventListener("click", function () {
     choiceBtns.appendChild(btn);
   }
 
-  setTimer();
 
 });
 
@@ -59,14 +58,11 @@ startBtn.addEventListener("click", function () {
 // Add an on click event to the buttons you create
 // a method that will check the text/value  of the button and see if it equals the correct answer
 choiceBtns.addEventListener("click", function() {
-  console.log("clicked button")
-  if (question() === question[0].answer)
-  feedback.textContent = ("Correct!")
-} else (=>    
-  feedback.textContent = ("Wrong!")
-)};
-
-// })
+  if (this.textContent === data[0].answer)
+  feedback.value = ("Correct!")
+  else
+  feedback.value = ("Wrong!")
+});
 
 
 // then bring us to the next question
